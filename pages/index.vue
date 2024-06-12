@@ -1,5 +1,5 @@
 <template>
-    <div>
-        index
-    </div>
-  </template>
+  <div>
+    {{ $t("welcome") }}
+  </div>
+</template>
