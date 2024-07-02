@@ -1,0 +1,70 @@
+{
+  "pages": {
+    "home": {
+      "heroSection": {
+        "title": "Contabilidade Simplificada para Pequenas e Médias Empresas",
+        "description": "Na Contabilidade Liberty você encontra suporte especializado para sua contabilidade simplificada, livre de complicações e adaptada às suas necessidades pessoais e profissionais.",
+        "button": "Entrar em contato"
+      },
+      "services": {
+        "newCompany": {
+          "title": "Abrir Empresa",
+          "description": "Comece seu negócio com o pé direito: Abra sua empresa de forma rápida, segura e sem complicações com a nossa assessoria completa.",
+          "button": "Entrar em contato"
+        },
+        "changeOffice": {
+          "title": "Trocar de Contabilidade",
+          "description": "Comece seu negócio com o pé direito: Abra sua empresa de forma rápida, segura e sem complicações com a nossa assessoria completa.",
+          "button": "Entrar em contato"
+        },
+        "changeStatus": {
+          "title": "Migrar MEI/ME",
+          "description": "Reduza seus custos e otimize sua carga tributária: Nossa equipe te ajudará a encontrar a melhor forma de reduzir seus custos e otimizar seus impostos.",
+          "button": "Entrar em contato"
+        }
+      },
+      "contact": {
+        "channels": {
+          "title": "Quer abrir sua empresa sem complicação?",
+          "description": "Solicite um orçamento através dos nossos canais de atendimento:",
+          "buttons": {
+            "whatsApp": {
+              "icon": "ic:baseline-whatsapp",
+              "text": "Entrar em contato pelo WhatsApp"
+            },
+            "email": {
+              "icon": "iconoir:mail-in",
+              "text": "Entrar em contato por e-mail"
+            },
+            "instagram": {
+              "icon": "mdi:instagram",
+              "text": "Entrar em contato no instagram"
+            }
+          }
+        }
+      },
+      "benefits": {
+        "security": {
+          "icon": "hugeicons:security-lock",
+          "title": "Responsabilidade 100% seguro",
+          "description": "Você pode ter certeza de que suas informações estão seguras conosco. Tomamos todas as medidas necessárias para proteger seus dados e garantir a sua segurança."
+        },
+        "costsReduction": {
+          "icon": "tdesign:saving-pot",
+          "title": "Redução de custos",
+          "description": "Nossa equipe experiente irá analisar suas finanças e identificar áreas onde você pode economizar dinheiro. Oferecemos soluções personalizadas para atender às suas necessidades específicas."
+        },
+        "stayFocused": {
+          "icon": "fluent:arrow-growth-24-filled",
+          "title": "Foque no que importa!",
+          "description": "Deixe a contabilidade conosco e você poderá se concentrar em gerenciar seu negócio e fazer o que você ama."
+        },
+        "support": {
+          "icon": "bx:chat",
+          "title": "Atendimento personalizado",
+          "description": "Nossa equipe estará sempre disponível para responder às suas perguntas e fornecer orientação. Nós nos esforçamos para construir relacionamentos duradouros com nossos clientes."
+        }
+      }
+    }
+  }
+}
