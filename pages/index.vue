@@ -6,5 +6,6 @@
     <Testimonials />
     <ContactChannels />
     <Benefits />
+    <ContactFormSection />
   </div>
 </template>

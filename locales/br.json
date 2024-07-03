@@ -41,6 +41,26 @@
               "text": "Entrar em contato no instagram"
             }
           }
+        },
+        "form": {
+          "title": "Impulsione o sucesso do seu negócio agora!",
+          "description": "Utilize o formulário para entrar em contato conosco",
+          "fullName": {
+            "label": "Nome completo",
+            "placeholder": "Preencha seu nome",
+            "minLength": "O nome deve ter pelo menos 3 caracteres",
+            "maxLength": "O nome deve ter no máximo 50 caracteres"
+          },
+          "cellphone": {
+            "label": "WhatsApp",
+            "placeholder": "(00) 99999-9999"
+          },
+          "email": {
+            "label": "E-mail",
+            "placeholder": "Seu melhor e-mail",
+            "invalid": "E-mail inválido"
+          },
+          "send": "Enviar"
         }
       },
       "benefits": {

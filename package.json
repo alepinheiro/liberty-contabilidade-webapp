@@ -19,7 +19,8 @@
     "nuxt": "^3.12.1",
     "swiper": "^11.1.4",
     "vue": "^3.4.27",
-    "vue-router": "^4.3.3"
+    "vue-router": "^4.3.3",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@types/bun": "latest",
@@ -33,5 +34,6 @@
   "module": "index.ts",
   "peerDependencies": {
     "typescript": "^5.0.0"
-  }
+  },
+  "packageManager": "yarn@4.3.0+sha512.1606bef7c84bc7d83b8576063de2fd08f7d69f9939015bed800f9585a002390268ecc777e9feeba7e26e9556aef6beaad4806968db2182ab5dd3e955ab3b9a0b"
 }
