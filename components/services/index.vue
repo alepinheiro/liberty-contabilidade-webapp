@@ -13,14 +13,16 @@
           <p class="text-white">
             {{ $t(`pages.home.services.${item}.description`) }}
           </p>
-          <UButton
-            color="primary"
-            variant="solid"
-            class="font-bold text-xl"
-            size="lg"
-          >
-            {{ $t(`pages.home.services.${item}.button`) }}
-          </UButton>
+          <NuxtLink to="#contactForm">
+            <UButton
+              color="primary"
+              variant="solid"
+              class="font-bold text-xl"
+              size="lg"
+            >
+              {{ $t(`pages.home.services.${item}.button`) }}
+            </UButton>
+          </NuxtLink>
         </div>
       </div>
     </UCard>

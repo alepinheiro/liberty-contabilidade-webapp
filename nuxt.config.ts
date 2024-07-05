@@ -26,4 +26,9 @@ export default defineNuxtConfig({
     locales: ["en", "br"],
     strategy: "no_prefix",
   },
+  router: {
+    options: {
+      scrollBehaviorType: "smooth",
+    },
+  },
 });

@@ -1,5 +1,5 @@
 <template>
-  <section class="px-5">
+  <section id="contactForm" class="px-5">
     <UCard>
       <div class="flex flex-col gap-10">
         <div class="flex flex-col gap-2">

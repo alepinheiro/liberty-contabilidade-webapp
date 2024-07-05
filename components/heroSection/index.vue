@@ -5,14 +5,16 @@
         {{ $t("pages.home.heroSection.title") }}
       </h1>
       <p class="text-2xl">{{ $t("pages.home.heroSection.description") }}</p>
-      <UButton
-        color="primary"
-        variant="solid"
-        class="font-bold text-xl"
-        size="lg"
-      >
-        {{ $t("pages.home.heroSection.button") }}
-      </UButton>
+      <NuxtLink to="#contactForm">
+        <UButton
+          color="primary"
+          variant="solid"
+          class="font-bold text-xl"
+          size="lg"
+        >
+          {{ $t("pages.home.heroSection.button") }}
+        </UButton>
+      </NuxtLink>
     </div>
   </section>
 </template>
