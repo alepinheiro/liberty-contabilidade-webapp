@@ -3,10 +3,10 @@
     <UCard>
       <div class="flex flex-col gap-10">
         <div class="flex flex-col gap-2">
-          <h1 class="text-3xl font-bold text-white">
+          <h1 class="text-3xl font-bold">
             {{ $t("pages.home.contact.form.title") }}
           </h1>
-          <p class="text-white">
+          <p class="">
             {{ $t("pages.home.contact.form.description") }}
           </p>
         </div>
@@ -19,6 +19,7 @@
           <UFormGroup
             :label="$t('pages.home.contact.form.fullName.label')"
             :placeholder="$t('pages.home.contact.form.fullName.placeholder')"
+            :ui="labelUi"
             name="fullName"
           >
             <UInput v-model="state.fullName" />
@@ -27,6 +28,7 @@
           <UFormGroup
             :label="$t('pages.home.contact.form.cellphone.label')"
             :placeholder="$t('pages.home.contact.form.cellphone.placeholder')"
+            :ui="labelUi"
             name="cellphone"
           >
             <UInput v-model="state.cellphone" />
@@ -35,6 +37,7 @@
           <UFormGroup
             :label="$t('pages.home.contact.form.email.label')"
             :placeholder="$t('pages.home.contact.form.email.placeholder')"
+            :ui="labelUi"
             name="email"
           >
             <UInput v-model="state.email" />
@@ -53,6 +56,12 @@ import { z } from "zod";
 import type { FormSubmitEvent } from "#ui/types";
 
 const { t } = useI18n();
+
+const labelUi = {
+  label: {
+    base: "text-white",
+  },
+};
 const schema = z.object({
   fullName: z
     .string()

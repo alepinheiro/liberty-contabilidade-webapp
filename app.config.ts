@@ -7,6 +7,16 @@ export default defineAppConfig({
       default: {
         color: "tangerine-900",
       },
+      variant: {
+        solid: "text-mirage-950",
+      },
+    },
+    card: {
+      base: "text-white",
+      background: "bg-mirage-950",
+      body: {
+        base: "text-white",
+      },
     },
   },
 });

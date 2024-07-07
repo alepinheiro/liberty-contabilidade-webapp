@@ -1,6 +1,6 @@
 <template>
   <section class="py-10 px-5">
-    <UCard class="!bg-background">
+    <UCard>
       <div class="flex flex-col gap-5">
         <h1 class="text-3xl font-bold text-center">
           {{ $t("pages.home.contact.channels.title") }}

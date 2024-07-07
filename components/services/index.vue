@@ -7,10 +7,10 @@
       />
       <div class="flex flex-col gap-5">
         <div v-for="item in services" :key="item" class="flex flex-col gap-2">
-          <h1 class="text-2xl font-bold text-white">
+          <h1 class="text-2xl font-bold">
             {{ $t(`pages.home.services.${item}.title`) }}
           </h1>
-          <p class="text-white">
+          <p class="">
             {{ $t(`pages.home.services.${item}.description`) }}
           </p>
           <NuxtLink to="#contactForm">
