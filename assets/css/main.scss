@@ -13,7 +13,9 @@ svg {
   @apply text-pretty antialiased;
 }
 
-p {
+p,
+span,
+div {
   @apply font-Monda;
 }
 

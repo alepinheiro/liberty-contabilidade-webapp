@@ -3,7 +3,7 @@
     <UCard class="flex flex-col gap-5">
       <NuxtImg
         src="/images/services.png"
-        class="h-96 w-full object-cover mb-5"
+        class="h-96 w-full object-cover mb-5 rounded"
       />
       <div class="flex flex-col gap-5">
         <div v-for="item in services" :key="item" class="flex flex-col gap-2">

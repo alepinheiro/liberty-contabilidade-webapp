@@ -63,8 +63,8 @@ export default <Partial<Config>>{
       },
       fontFamily: {
         Monda: ["Monda", "sans-serif"],
-        Petrona: ["Petrona", "sans-serif"],
-        Cinzel: ["Cinzel", "sans-serif"],
+        Petrona: ["Petrona", "serif"],
+        Cinzel: ["Cinzel", "serif"],
       },
       aspectRatio: {
         auto: "auto",

@@ -10,7 +10,7 @@
         <h1 class="text-3xl font-bold">
           {{ $t(`pages.home.benefits.${item}.title`) }}
         </h1>
-        <p class="">
+        <p>
           {{ $t(`pages.home.benefits.${item}.description`) }}
         </p>
       </div>

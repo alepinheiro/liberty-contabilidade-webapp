@@ -8,16 +8,19 @@
       },
       "services": {
         "newCompany": {
+          "icon": "carbon:location-company",
           "title": "Abrir Empresa",
           "description": "Comece seu negócio com o pé direito: Abra sua empresa de forma rápida, segura e sem complicações com a nossa assessoria completa.",
           "button": "Entrar em contato"
         },
         "changeOffice": {
+          "icon": "icon-park-outline:change",
           "title": "Trocar de Contabilidade",
           "description": "Comece seu negócio com o pé direito: Abra sua empresa de forma rápida, segura e sem complicações com a nossa assessoria completa.",
           "button": "Entrar em contato"
         },
         "changeStatus": {
+          "icon": "fluent:arrow-growth-20-filled",
           "title": "Migrar MEI/ME",
           "description": "Reduza seus custos e otimize sua carga tributária: Nossa equipe te ajudará a encontrar a melhor forma de reduzir seus custos e otimizar seus impostos.",
           "button": "Entrar em contato"
@@ -38,7 +41,7 @@
             },
             "instagram": {
               "icon": "mdi:instagram",
-              "text": "Entrar em contato no instagram"
+              "text": "Entrar em contato no Instagram"
             }
           }
         },
@@ -86,5 +89,6 @@
         }
       }
     }
-  }
+  },
+  "title": "Contabilidade Liberty "
 }
