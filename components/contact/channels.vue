@@ -14,11 +14,11 @@
             :key="item"
             :text="$t(`pages.home.contact.channels.buttons.${item}.text`)"
           >
-            <UButton color="primary" size="xl" square>
+            <UButton color="primary" size="lg" square>
               <Icon
                 :icon="$t(`pages.home.contact.channels.buttons.${item}.icon`)"
                 :name="item"
-                class="h-16 w-16"
+                class="h-12 w-12"
               />
             </UButton>
           </UTooltip>

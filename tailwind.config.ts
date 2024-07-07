@@ -61,6 +61,11 @@ export default <Partial<Config>>{
           "950": "#0b1b5b",
         },
       },
+      fontFamily: {
+        Monda: ["Monda", "sans-serif"],
+        Petrona: ["Petrona", "sans-serif"],
+        Cinzel: ["Cinzel", "sans-serif"],
+      },
       aspectRatio: {
         auto: "auto",
         square: "1 / 1",

@@ -12,6 +12,7 @@ export default defineNuxtConfig({
     "@nuxtjs/i18n",
     "@nuxt/image",
     "@nuxtjs/sitemap",
+    "@nuxtjs/google-fonts",
   ],
   devtools: { enabled: true },
   css: ["~/assets/css/main.scss"],
@@ -29,6 +30,13 @@ export default defineNuxtConfig({
   router: {
     options: {
       scrollBehaviorType: "smooth",
+    },
+  },
+  googleFonts: {
+    families: {
+      Cinzel: "200..900",
+      Petrona: "200..900",
+      Monda: "200..900",
     },
   },
 });
