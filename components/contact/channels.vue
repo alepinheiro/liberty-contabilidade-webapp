@@ -2,10 +2,10 @@
   <section class="py-10 px-5">
     <UCard>
       <div class="flex flex-col gap-5">
-        <h1 class="text-3xl font-bold text-center">
+        <h1 class="text-3xl font-bold text-center text-primary">
           {{ $t("pages.home.contact.channels.title") }}
         </h1>
-        <p>
+        <p class="text-white">
           {{ $t("pages.home.contact.channels.description") }}
         </p>
         <div class="flex flex-row justify-between">

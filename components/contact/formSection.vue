@@ -1,12 +1,12 @@
 <template>
-  <section id="contactForm" class="px-5">
+  <section id="contactForm" class="p-5">
     <UCard>
       <div class="flex flex-col gap-10">
         <div class="flex flex-col gap-2">
-          <h1 class="text-3xl font-bold">
+          <h1 class="text-3xl font-bold text-primary">
             {{ $t("pages.home.contact.form.title") }}
           </h1>
-          <p class="">
+          <p class="text-white">
             {{ $t("pages.home.contact.form.description") }}
           </p>
         </div>
