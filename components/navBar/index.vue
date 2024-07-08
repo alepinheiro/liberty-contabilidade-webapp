@@ -2,7 +2,9 @@
   <header
     class="bg-mirage backdrop-blur border-b -mb-px sticky top-0 z-50 border-gray-800 h-14"
   >
-    <div class="flex flex-row items-center justify-between h-full px-4">
+    <div
+      class="flex flex-row items-center justify-between h-full px-4 max-w-7xl mx-auto"
+    >
       <div class="flex flex-row items-center">
         <UAvatar
           src="/images/logo.webp"
@@ -14,8 +16,8 @@
         </h1>
       </div>
       <UPopover
-        color="mirage"
         :ui="{
+          wrapper: 'lg:hidden',
           background: 'bg-mirage',
           ring: 'ring-1 ring-mirage-900 dark:ring-mirage-800',
         }"
