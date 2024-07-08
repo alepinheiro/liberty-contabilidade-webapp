@@ -18,5 +18,10 @@ export default defineAppConfig({
         base: "text-white",
       },
     },
+    divider: {
+      border: {
+        base: "border-gray-900",
+      },
+    },
   },
 });
