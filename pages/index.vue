@@ -3,7 +3,7 @@
     <NavBar />
     <HeroSection />
     <Services />
-    <Testimonials />
+    <!-- <Testimonials /> -->
     <ContactChannels />
     <Benefits />
     <ContactFormSection />

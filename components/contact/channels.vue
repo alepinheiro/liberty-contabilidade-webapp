@@ -1,11 +1,16 @@
 <template>
   <section class="py-10 px-5">
-    <UCard>
+    <UCard
+      :ui="{
+        background: 'bg-white dark:bg-white',
+        ring: 'ring-1 ring-gray-200 dark:ring-gray-200',
+      }"
+    >
       <div class="flex flex-col gap-5">
-        <h1 class="text-3xl font-bold text-center text-primary">
+        <h1 class="text-3xl font-bold text-center text-secondary">
           {{ $t("pages.home.contact.channels.title") }}
         </h1>
-        <p class="text-white">
+        <p class="">
           {{ $t("pages.home.contact.channels.description") }}
         </p>
         <div class="flex flex-row justify-between">
