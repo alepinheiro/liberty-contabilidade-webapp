@@ -1,52 +1,61 @@
 <template>
   <section id="contactForm" class="p-5">
-    <UCard>
-      <div class="flex flex-col gap-10">
-        <div class="flex flex-col gap-2">
-          <h1 class="text-3xl font-bold text-primary">
-            {{ $t("pages.home.contact.form.title") }}
-          </h1>
-          <p class="text-white">
-            {{ $t("pages.home.contact.form.description") }}
-          </p>
+    <UCard
+      :ui="{
+        base: 'max-w-6xl mx-auto',
+      }"
+    >
+      <div class="flex lg:flex-row gap-5 items-center">
+        <div class="w-1/2 hidden lg:flex">
+          <NuxtImg src="http://placeskull.com/1000/1000" class="rounded" />
         </div>
-        <UForm
-          :schema="schema"
-          :state="state"
-          class="space-y-4"
-          @submit="onSubmit"
-        >
-          <UFormGroup
-            :label="$t('pages.home.contact.form.fullName.label')"
-            :placeholder="$t('pages.home.contact.form.fullName.placeholder')"
-            :ui="labelUi"
-            name="fullName"
+        <div class="flex flex-col gap-5">
+          <div class="flex flex-col gap-2">
+            <h1 class="text-3xl font-bold text-primary">
+              {{ $t("pages.home.contact.form.title") }}
+            </h1>
+            <p class="text-white">
+              {{ $t("pages.home.contact.form.description") }}
+            </p>
+          </div>
+          <UForm
+            :schema="schema"
+            :state="state"
+            class="space-y-4"
+            @submit="onSubmit"
           >
-            <UInput v-model="state.fullName" />
-          </UFormGroup>
+            <UFormGroup
+              :label="$t('pages.home.contact.form.fullName.label')"
+              :placeholder="$t('pages.home.contact.form.fullName.placeholder')"
+              :ui="labelUi"
+              name="fullName"
+            >
+              <UInput v-model="state.fullName" />
+            </UFormGroup>
 
-          <UFormGroup
-            :label="$t('pages.home.contact.form.cellphone.label')"
-            :placeholder="$t('pages.home.contact.form.cellphone.placeholder')"
-            :ui="labelUi"
-            name="cellphone"
-          >
-            <UInput v-model="state.cellphone" />
-          </UFormGroup>
+            <UFormGroup
+              :label="$t('pages.home.contact.form.cellphone.label')"
+              :placeholder="$t('pages.home.contact.form.cellphone.placeholder')"
+              :ui="labelUi"
+              name="cellphone"
+            >
+              <UInput v-model="state.cellphone" />
+            </UFormGroup>
 
-          <UFormGroup
-            :label="$t('pages.home.contact.form.email.label')"
-            :placeholder="$t('pages.home.contact.form.email.placeholder')"
-            :ui="labelUi"
-            name="email"
-          >
-            <UInput v-model="state.email" />
-          </UFormGroup>
+            <UFormGroup
+              :label="$t('pages.home.contact.form.email.label')"
+              :placeholder="$t('pages.home.contact.form.email.placeholder')"
+              :ui="labelUi"
+              name="email"
+            >
+              <UInput v-model="state.email" />
+            </UFormGroup>
 
-          <UButton color="primary" type="submit">
-            {{ $t("pages.home.contact.form.send") }}
-          </UButton>
-        </UForm>
+            <UButton color="primary" type="submit">
+              {{ $t("pages.home.contact.form.send") }}
+            </UButton>
+          </UForm>
+        </div>
       </div>
     </UCard>
   </section>
