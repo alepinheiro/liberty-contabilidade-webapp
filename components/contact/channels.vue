@@ -1,19 +1,24 @@
 <template>
-  <section class="py-10 px-5">
+  <section class="py-24 px-5">
     <UCard
       :ui="{
+        base: 'max-w-5xl mx-auto',
         background: 'bg-white dark:bg-white',
         ring: 'ring-1 ring-gray-200 dark:ring-gray-200',
       }"
     >
-      <div class="flex flex-col gap-5">
-        <h1 class="text-3xl font-bold text-center text-secondary">
-          {{ $t("pages.home.contact.channels.title") }}
-        </h1>
-        <p class="">
-          {{ $t("pages.home.contact.channels.description") }}
-        </p>
-        <div class="flex flex-row justify-between">
+      <div class="flex flex-col lg:flex-row gap-5 lg:justify-between">
+        <div class="flex flex-col gap-1 lg:w-2/3 items-start">
+          <h1
+            class="text-3xl font-bold text-center text-secondary lg:text-left lg:w-2/3"
+          >
+            {{ $t("pages.home.contact.channels.title") }}
+          </h1>
+          <p class="">
+            {{ $t("pages.home.contact.channels.description") }}
+          </p>
+        </div>
+        <div class="flex flex-row items-center justify-between lg:w-1/3">
           <UTooltip
             v-for="item in payload"
             :key="item"

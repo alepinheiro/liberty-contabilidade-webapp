@@ -1,31 +1,39 @@
 <template>
   <section class="px-5">
-    <UCard class="flex flex-col gap-5">
-      <NuxtImg
-        src="/images/services.png"
-        class="h-96 w-full object-cover mb-5 rounded"
-      />
-      <div class="flex flex-col gap-5">
-        <div v-for="item in services" :key="item" class="flex flex-col gap-2">
-          <h1 class="text-2xl font-bold text-white">
-            {{ $t(`pages.home.services.${item}.title`) }}
-          </h1>
-          <p class="text-white">
-            {{ $t(`pages.home.services.${item}.description`) }}
-          </p>
-          <NuxtLink to="#contactForm">
-            <UButton
-              color="primary"
-              variant="solid"
-              class="font-bold text-xl"
-              size="lg"
-            >
-              {{ $t(`pages.home.services.${item}.button`) }}
-            </UButton>
-          </NuxtLink>
+    <div class="lg:max-w-7xl mx-auto">
+      <UCard
+        :ui="{
+          body: {
+            base: 'flex flex-col lg:flex-row items-stretch gap-5 w-full',
+          },
+        }"
+      >
+        <NuxtImg
+          src="/images/services.png"
+          class="h-96 lg:h-[36em] w-full lg:flex-1 object-cover mb-5 lg:mb-0 rounded"
+        />
+        <div class="flex flex-col justify-between gap-5 w-full flex-1">
+          <div v-for="item in services" :key="item" class="flex flex-col gap-2">
+            <h1 class="text-2xl font-bold text-white">
+              {{ $t(`pages.home.services.${item}.title`) }}
+            </h1>
+            <p class="text-white">
+              {{ $t(`pages.home.services.${item}.description`) }}
+            </p>
+            <NuxtLink to="#contactForm">
+              <UButton
+                color="primary"
+                variant="solid"
+                class="font-bold text-xl"
+                size="lg"
+              >
+                {{ $t(`pages.home.services.${item}.button`) }}
+              </UButton>
+            </NuxtLink>
+          </div>
         </div>
-      </div>
-    </UCard>
+      </UCard>
+    </div>
   </section>
 </template>
 <script lang="ts" setup>

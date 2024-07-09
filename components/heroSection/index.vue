@@ -1,6 +1,6 @@
 <template>
   <section class="py-10 px-5f flex">
-    <div class="flex flex-col gap-12 max-w-6xl mx-auto pt-14 pb-48">
+    <div class="flex flex-col gap-8 max-w-5xl mx-auto pt-14 pb-24">
       <h1 class="text-5xl font-bold w-3/4">
         {{ $t("pages.home.heroSection.title") }}
       </h1>
