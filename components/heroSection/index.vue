@@ -1,10 +1,10 @@
 <template>
-  <section class="py-10 px-5f flex">
-    <div class="flex flex-col gap-8 max-w-5xl mx-auto pt-14 pb-24">
-      <h1 class="text-5xl font-bold w-3/4">
+  <section class="py-10 px-5 flex">
+    <div class="flex flex-col gap-8 max-w-5xl mx-auto lg:pt-14 lg:pb-24">
+      <h1 class="text-5xl font-bold lg:w-3/4">
         {{ $t("pages.home.heroSection.title") }}
       </h1>
-      <p class="text-2xl w-3/5">
+      <p class="text-2xl lg:w-3/5">
         {{ $t("pages.home.heroSection.description") }}
       </p>
       <NuxtLink to="#contactForm">

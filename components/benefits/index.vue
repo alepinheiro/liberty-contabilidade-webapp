@@ -1,7 +1,7 @@
 <template>
   <section class="py-10 px-5">
     <div class="max-w-6xl mx-auto">
-      <div class="flex flex-col lg:flex-row gap-24 lg:gap-3">
+      <div class="flex flex-col lg:flex-row gap-3">
         <UCard
           v-for="item in payload"
           :key="item"
