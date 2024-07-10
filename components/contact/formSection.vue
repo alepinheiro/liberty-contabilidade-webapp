@@ -7,7 +7,7 @@
     >
       <div class="flex lg:flex-row gap-5 items-center">
         <div class="w-1/2 hidden lg:flex">
-          <NuxtImg src="http://placeskull.com/1000/1000" class="rounded" />
+          <NuxtImg src="/images/og-image.png" class="rounded" />
         </div>
         <div class="flex flex-col gap-5">
           <div class="flex flex-col gap-2">
