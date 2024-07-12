@@ -25,6 +25,15 @@
             @submit="onSubmit"
           >
             <UFormGroup
+              :label="$t('pages.home.contact.form.service.label')"
+              :placeholder="$t('pages.home.contact.form.service.placeholder')"
+              :ui="labelUi"
+              name="service"
+            >
+              <USelect v-model="state.service" :options="selectOptions" />
+            </UFormGroup>
+
+            <UFormGroup
               :label="$t('pages.home.contact.form.fullName.label')"
               :placeholder="$t('pages.home.contact.form.fullName.placeholder')"
               :ui="labelUi"
@@ -51,7 +60,7 @@
               <UInput v-model="state.email" />
             </UFormGroup>
 
-            <UButton color="primary" type="submit">
+            <UButton color="primary" variant="solid" type="submit">
               {{ $t("pages.home.contact.form.send") }}
             </UButton>
           </UForm>
@@ -71,6 +80,7 @@ const labelUi = {
     base: "text-white",
   },
 };
+const services = ["newCompany", "changeOffice", "changeStatus"] as const;
 const schema = z.object({
   fullName: z
     .string()
@@ -80,15 +90,25 @@ const schema = z.object({
   email: z
     .string()
     .email({ message: t("pages.home.contact.form.email.invalid") }),
+  service: z.enum(services),
 });
 
 type Schema = z.output<typeof schema>;
 
 const state = reactive<Schema>({
+  service: "newCompany",
   fullName: "",
   cellphone: "",
   email: "",
 });
+
+const selectOptions: Array<{ label: string; value: Schema["service"] }> =
+  services.map((service) => {
+    return {
+      label: t("pages.home.services." + service + ".title"),
+      value: service,
+    };
+  });
 
 async function onSubmit(event: FormSubmitEvent<Schema>) {
   // Do something with data

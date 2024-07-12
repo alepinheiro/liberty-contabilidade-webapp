@@ -4,7 +4,24 @@
       "heroSection": {
         "title": "Contabilidade Simplificada para Pequenas e Médias Empresas",
         "description": "Na Contabilidade Liberty você encontra suporte especializado para sua contabilidade simplificada, livre de complicações e adaptada às suas necessidades pessoais e profissionais.",
-        "button": "Entrar em contato"
+        "benefits": {
+          "clock": {
+            "icon": "majesticons:clock-plus-line",
+            "text": "Atendimento humanizado e rápido: sua mensagem é importante para nós."
+          },
+          "tax": {
+            "icon": "carbon:calculator-check",
+            "text": "Deseja pagar menos impostos? Somos especialistas em te ajudar a alcançar esse objetivo."
+          },
+          "country": {
+            "icon": "game-icons:brazil",
+            "text": "A contabilidade que atende a todos os estados do Brasil."
+          }
+        },
+        "buttons": {
+          "newBusiness": "Quero abrir uma empresa",
+          "changeOffice": "Trocar de contabilidade"
+        }
       },
       "services": {
         "newCompany": {
@@ -62,6 +79,11 @@
             "label": "E-mail",
             "placeholder": "Seu melhor e-mail",
             "invalid": "E-mail inválido"
+          },
+          "service": {
+            "label": "Tenho interesse em",
+            "placeholder": "Selecione",
+            "invalid": "Selecione uma opção"
           },
           "send": "Enviar"
         }

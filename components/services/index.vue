@@ -14,9 +14,13 @@
         />
         <div class="flex flex-col justify-between gap-5 w-full flex-1">
           <div v-for="item in services" :key="item" class="flex flex-col gap-2">
-            <h1 class="text-2xl font-bold text-white">
-              {{ $t(`pages.home.services.${item}.title`) }}
-            </h1>
+            <Icon
+              width="48"
+              height="48"
+              :name="item"
+              class="text-mirage-900"
+              :icon="$t('pages.home.services.' + item + '.icon')"
+            />
             <p class="text-white">
               {{ $t(`pages.home.services.${item}.description`) }}
             </p>
@@ -24,10 +28,16 @@
               <UButton
                 color="primary"
                 variant="solid"
-                class="font-bold text-xl"
+                class="font-bold"
                 size="lg"
               >
-                {{ $t(`pages.home.services.${item}.button`) }}
+                {{ $t(`pages.home.services.${item}.title`) }}
+                <Icon
+                  width="20"
+                  height="20"
+                  :name="$t(`pages.home.services.${item}.title`)"
+                  icon="ri:arrow-right-line"
+                />
               </UButton>
             </NuxtLink>
           </div>
@@ -36,6 +46,8 @@
     </div>
   </section>
 </template>
+
 <script lang="ts" setup>
+import { Icon } from "@iconify/vue";
 const services = ["newCompany", "changeOffice", "changeStatus"];
 </script>
