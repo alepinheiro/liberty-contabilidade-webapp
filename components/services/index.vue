@@ -6,7 +6,7 @@
           src="/images/services.png"
           class="h-96 lg:h-[36em] w-full lg:flex-1 object-cover mb-5 lg:mb-0 rounded"
         />
-        <div class="flex flex-col justify-between gap-5 w-full flex-1">
+        <div class="flex flex-col gap-5 w-full flex-1">
           <div v-for="item in services" :key="item" class="flex flex-col gap-2">
             <Icon
               width="48"
@@ -26,7 +26,7 @@
             <UButton
               color="primary"
               variant="solid"
-              class="font-bold"
+              class="font-bold w-fit mr-auto"
               size="lg"
               @click="$emit('select', item)"
             >
