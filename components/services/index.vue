@@ -1,13 +1,7 @@
 <template>
   <section class="px-5">
     <div class="lg:max-w-7xl mx-auto">
-      <UCard
-        :ui="{
-          body: {
-            base: 'flex flex-col lg:flex-row items-stretch gap-5 w-full',
-          },
-        }"
-      >
+      <div class="flex flex-col lg:flex-row items-stretch gap-5 w-full">
         <NuxtImg
           src="/images/services.png"
           class="h-96 lg:h-[36em] w-full lg:flex-1 object-cover mb-5 lg:mb-0 rounded"
@@ -18,10 +12,15 @@
               width="48"
               height="48"
               :name="item"
-              class="text-mirage-900"
+              class="text-mirage-900 dark:text-mirage-900"
               :icon="$t('pages.home.services.' + item + '.icon')"
             />
-            <p class="text-white">
+            <p
+              class=""
+              :class="[
+                activeStyle === 'dark' ? 'text-white dark:text-white' : '',
+              ]"
+            >
               {{ $t(`pages.home.services.${item}.description`) }}
             </p>
             <NuxtLink to="#contactForm">
@@ -42,12 +41,15 @@
             </NuxtLink>
           </div>
         </div>
-      </UCard>
+      </div>
     </div>
   </section>
 </template>
 
 <script lang="ts" setup>
 import { Icon } from "@iconify/vue";
+defineProps<{
+  activeStyle: "light" | "dark";
+}>();
 const services = ["newCompany", "changeOffice", "changeStatus"];
 </script>

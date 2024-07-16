@@ -9,8 +9,9 @@ h4,
 h5,
 h6,
 p,
+span,
 svg {
-  @apply text-pretty antialiased text-zinc-900;
+  @apply text-pretty antialiased text-zinc-900 dark:text-zinc-900;
 }
 
 p,

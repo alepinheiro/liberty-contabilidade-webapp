@@ -1,10 +1,19 @@
 <template>
-  <section class="py-10 px-5 flex">
+  <section>
+    <div class="absolute inset-0 -z-10 flex justify-end overflow-hidden">
+      <BrandIcon class="h-[48em] w-[48em] text-primary opacity-30" />
+    </div>
     <div class="flex flex-col gap-4 max-w-5xl mx-auto lg:pt-14 lg:pb-24">
-      <h1 class="text-5xl font-bold lg:w-3/4">
+      <h1
+        class="text-5xl font-bold lg:w-3/4"
+        :class="[activeStyle === 'dark' ? 'text-white' : '']"
+      >
         {{ $t("pages.home.heroSection.title") }}
       </h1>
-      <p class="text-2xl lg:w-3/5">
+      <p
+        class="text-2xl lg:w-3/5"
+        :class="[activeStyle === 'dark' ? 'text-white' : '']"
+      >
         {{ $t("pages.home.heroSection.description") }}
       </p>
 
@@ -21,7 +30,10 @@
             class="text-mirage-900"
             :icon="$t('pages.home.heroSection.benefits.' + item + '.icon')"
           />
-          <span class="text-sm">
+          <span
+            class="text-sm"
+            :class="[activeStyle === 'dark' ? 'text-white' : '']"
+          >
             {{ $t("pages.home.heroSection.benefits." + item + ".text") }}
           </span>
         </div>
@@ -57,8 +69,11 @@
     </div>
   </section>
 </template>
+
 <script lang="ts" setup>
 import { Icon } from "@iconify/vue";
-
+defineProps<{
+  activeStyle: "light" | "dark";
+}>();
 const payload = ["clock", "tax", "country"];
 </script>
