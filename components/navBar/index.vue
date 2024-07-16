@@ -22,7 +22,7 @@
           ring: 'ring-1 ring-mirage-900 dark:ring-mirage-800',
         }"
       >
-        <UButton color="secondary" variant="ghost">
+        <UButton color="primary" variant="ghost">
           <Icon icon="eva:menu-fill" name="menu" class="text-white size-6" />
         </UButton>
 
@@ -34,8 +34,9 @@
               <UButton
                 v-for="item in services"
                 :key="item"
-                color="secondary"
+                color="primary"
                 variant="ghost"
+                @click="$emit('select', item)"
               >
                 <div class="flex flex-row gap-2 text-white items-center">
                   <Icon
@@ -54,7 +55,7 @@
               <UButton
                 v-for="item in contacts"
                 :key="item"
-                color="secondary"
+                color="primary"
                 variant="ghost"
               >
                 <div class="flex flex-row gap-2 text-white items-center">
@@ -72,13 +73,40 @@
           </div>
         </template>
       </UPopover>
+
+      <ul class="hidden lg:flex flex-row gap-2">
+        <li v-for="item of services" :key="item">
+          <UButton
+            color="primary"
+            variant="ghost"
+            @click="$emit('select', item)"
+          >
+            <div class="flex flex-row gap-2 items-center">
+              <!-- <Icon
+                :icon="$t(`pages.home.services.${item}.icon`)"
+                :name="item"
+                class="h-5 w-5 text-white"
+              /> -->
+              {{ $t(`pages.home.services.${item}.title`) }}
+            </div>
+          </UButton>
+        </li>
+      </ul>
     </div>
   </header>
 </template>
 
 <script lang="ts" setup>
 import { Icon } from "@iconify/vue";
+import type { Services } from "~/app.vue";
 
 const contacts = ["whatsApp", "email", "instagram"];
-const services = ["newCompany", "changeOffice", "changeStatus"];
+const services: Array<Services> = [
+  "newCompany",
+  "changeOffice",
+  "changeStatus",
+];
+defineEmits<{
+  select: [value: Services];
+}>();
 </script>

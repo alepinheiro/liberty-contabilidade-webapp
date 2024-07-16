@@ -40,31 +40,29 @@
       </div>
 
       <div class="flex flex-col md:flex-row gap-2 w-full">
-        <NuxtLink to="#contactForm">
-          <UButton
-            color="primary"
-            variant="solid"
-            class="font-bold w-full flex"
-            size="xl"
-          >
-            <span class="mx-auto uppercase">
-              {{ $t("pages.home.heroSection.buttons.newBusiness") }}
-            </span>
-          </UButton>
-        </NuxtLink>
+        <UButton
+          color="primary"
+          variant="solid"
+          class="font-bold"
+          size="xl"
+          @click="$emit('select', 'newCompany')"
+        >
+          <span class="mx-auto uppercase">
+            {{ $t("pages.home.heroSection.buttons.newBusiness") }}
+          </span>
+        </UButton>
 
-        <NuxtLink to="#contactForm">
-          <UButton
-            color="primary"
-            variant="solid"
-            class="font-bold w-full"
-            size="xl"
-          >
-            <span class="mx-auto uppercase">
-              {{ $t("pages.home.heroSection.buttons.changeOffice") }}
-            </span>
-          </UButton>
-        </NuxtLink>
+        <UButton
+          color="primary"
+          variant="solid"
+          class="font-bold"
+          size="xl"
+          @click="$emit('select', 'changeOffice')"
+        >
+          <span class="mx-auto uppercase">
+            {{ $t("pages.home.heroSection.buttons.changeOffice") }}
+          </span>
+        </UButton>
       </div>
     </div>
   </section>
@@ -72,8 +70,12 @@
 
 <script lang="ts" setup>
 import { Icon } from "@iconify/vue";
+import type { Services } from "~/app.vue";
 defineProps<{
   activeStyle: "light" | "dark";
+}>();
+defineEmits<{
+  select: [value: Services];
 }>();
 const payload = ["clock", "tax", "country"];
 </script>

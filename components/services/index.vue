@@ -16,29 +16,28 @@
               :icon="$t('pages.home.services.' + item + '.icon')"
             />
             <p
-              class=""
               :class="[
                 activeStyle === 'dark' ? 'text-white dark:text-white' : '',
               ]"
             >
               {{ $t(`pages.home.services.${item}.description`) }}
             </p>
-            <NuxtLink to="#contactForm">
-              <UButton
-                color="primary"
-                variant="solid"
-                class="font-bold"
-                size="lg"
-              >
-                {{ $t(`pages.home.services.${item}.title`) }}
-                <Icon
-                  width="20"
-                  height="20"
-                  :name="$t(`pages.home.services.${item}.title`)"
-                  icon="ri:arrow-right-line"
-                />
-              </UButton>
-            </NuxtLink>
+
+            <UButton
+              color="primary"
+              variant="solid"
+              class="font-bold"
+              size="lg"
+              @click="$emit('select', item)"
+            >
+              {{ $t(`pages.home.services.${item}.title`) }}
+              <Icon
+                width="20"
+                height="20"
+                :name="$t(`pages.home.services.${item}.title`)"
+                icon="ri:arrow-right-line"
+              />
+            </UButton>
           </div>
         </div>
       </div>
@@ -48,8 +47,16 @@
 
 <script lang="ts" setup>
 import { Icon } from "@iconify/vue";
+import type { Services } from "~/app.vue";
 defineProps<{
   activeStyle: "light" | "dark";
 }>();
-const services = ["newCompany", "changeOffice", "changeStatus"];
+const services: Array<Services> = [
+  "newCompany",
+  "changeOffice",
+  "changeStatus",
+];
+defineEmits<{
+  select: [value: Services];
+}>();
 </script>

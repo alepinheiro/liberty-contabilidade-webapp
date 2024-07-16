@@ -72,6 +72,11 @@
 <script lang="ts" setup>
 import { z } from "zod";
 import type { FormSubmitEvent } from "#ui/types";
+import type { Services } from "~/app.vue";
+
+const props = defineProps<{
+  service: Services;
+}>();
 
 const { t } = useI18n();
 
@@ -93,14 +98,23 @@ const schema = z.object({
   service: z.enum(services),
 });
 
-type Schema = z.output<typeof schema>;
+type Schema = z.infer<typeof schema>;
+const selectedService = computed(() => props.service);
 
 const state = reactive<Schema>({
-  service: "newCompany",
+  service: selectedService.value,
   fullName: "",
   cellphone: "",
   email: "",
 });
+
+// Watch for changes in props.service and update state.service accordingly
+watch(
+  () => props.service,
+  (newService) => {
+    state.service = newService;
+  }
+);
 
 const selectOptions: Array<{ label: string; value: Schema["service"] }> =
   services.map((service) => {

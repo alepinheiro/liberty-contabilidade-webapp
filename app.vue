@@ -2,6 +2,8 @@
   <NuxtPage />
 </template>
 <script setup lang="ts">
+export type Services = "newCompany" | "changeOffice" | "changeStatus";
+
 useHead({
   title: "Liberty Contabilidade - (47) 98921-9131",
   meta: [

@@ -1,20 +1,22 @@
 <template>
   <div class="bg-background relative">
-    <NavBar />
+    <NavBar @select="onSelect" />
     <HeroSection
       class="py-10 px-5 flex relative z-0"
       :class="[heroSection ? '' : 'heroSection']"
       :active-style="options.heroSection"
+      @select="onSelect"
     />
     <Services
       class="py-10"
       :class="[services ? '' : 'bg-[#000916]']"
       :active-style="options.services"
+      @select="onSelect"
     />
     <!-- <Testimonials /> -->
     <ContactChannels />
     <Benefits />
-    <ContactFormSection />
+    <ContactFormSection id="contactForm" :service="activeService" />
     <div
       :class="[options.isOpen ? 'h-96' : 'h-10']"
       class="fixed bottom-0 left-24 z-10 overflow-hidden w-64 rounded-t-xl border border-b-0 border-mirage-900 transition-all ease-in-out"
@@ -46,14 +48,24 @@
 </template>
 
 <script setup lang="ts">
+//
+import type { Services } from "~/app.vue";
+
+const { $gsap: gsap } = useNuxtApp();
 const heroSection = ref(false);
 const services = ref(false);
+const activeService = ref<Services>("newCompany");
 const options = reactive({
   isOpen: true,
   activeStyle: 1,
   heroSection: computed(() => (heroSection.value === true ? "light" : "dark")),
   services: computed(() => (services.value === true ? "light" : "dark")),
 });
+
+const onSelect = (value: Services) => {
+  activeService.value = value;
+  gsap.to(window, { duration: 1, scrollTo: "#contactForm", ease: "power2" });
+};
 </script>
 
 <style>
