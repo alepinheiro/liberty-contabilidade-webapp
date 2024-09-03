@@ -11,7 +11,7 @@
           size="lg"
           alt="Contabilidade Liberty"
         />
-        <h1 class="font-Cinzel text-2xl text-primary">
+        <h1 class="font-Cinzel text-2xl text-white dark:text-white">
           {{ $t("title") }}
         </h1>
       </div>

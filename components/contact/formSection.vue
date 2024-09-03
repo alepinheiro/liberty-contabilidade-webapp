@@ -11,10 +11,10 @@
         </div>
         <div class="flex flex-col gap-5">
           <div class="flex flex-col gap-2">
-            <h1 class="text-3xl font-bold text-primary">
+            <h1 class="text-3xl font-bold text-white dark:text-white">
               {{ $t("pages.home.contact.form.title") }}
             </h1>
-            <p class="text-white">
+            <p class="text-white dark:text-white">
               {{ $t("pages.home.contact.form.description") }}
             </p>
           </div>

@@ -6,13 +6,13 @@
     <div class="flex flex-col gap-4 max-w-5xl mx-auto lg:pt-14 lg:pb-24">
       <h1
         class="text-5xl font-bold lg:w-3/4"
-        :class="[activeStyle === 'dark' ? 'text-white' : '']"
+        :class="[activeStyle === 'dark' ? 'text-white dark:text-white' : '']"
       >
         {{ $t("pages.home.heroSection.title") }}
       </h1>
       <p
         class="text-2xl lg:w-3/5"
-        :class="[activeStyle === 'dark' ? 'text-white' : '']"
+        :class="[activeStyle === 'dark' ? 'text-white dark:text-white' : '']"
       >
         {{ $t("pages.home.heroSection.description") }}
       </p>
@@ -27,12 +27,16 @@
             width="36"
             height="36"
             :name="item"
-            class="text-mirage-900"
+            :class="[
+              activeStyle === 'dark' ? 'text-white dark:text-white' : '',
+            ]"
             :icon="$t('pages.home.heroSection.benefits.' + item + '.icon')"
           />
           <span
             class="text-sm"
-            :class="[activeStyle === 'dark' ? 'text-white' : '']"
+            :class="[
+              activeStyle === 'dark' ? 'text-white dark:text-white' : '',
+            ]"
           >
             {{ $t("pages.home.heroSection.benefits." + item + ".text") }}
           </span>
