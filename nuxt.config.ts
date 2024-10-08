@@ -1,5 +1,11 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  runtimeConfig: {
+    private: {
+      JAILSINHO_API_KEY: process.env.JAILSINHO_API_KEY,
+      JAILSINHO_API_URL: process.env.JAILSINHO_API_URL,
+    },
+  },
   app: {
     head: {
       charset: "utf-8",

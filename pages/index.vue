@@ -17,6 +17,7 @@
     <ContactChannels />
     <Benefits />
     <ContactFormSection id="contactForm" :service="activeService" />
+    <UNotifications />
   </div>
 </template>
 

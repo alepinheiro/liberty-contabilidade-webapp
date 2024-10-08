@@ -23,5 +23,8 @@ export default defineAppConfig({
         base: "border-gray-900",
       },
     },
+    "form-input": {
+      background: "bg-white",
+    },
   },
 });
