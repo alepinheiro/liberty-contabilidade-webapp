@@ -17,33 +17,6 @@
     <ContactChannels />
     <Benefits />
     <ContactFormSection id="contactForm" :service="activeService" />
-    <div
-      :class="[options.isOpen ? 'h-96' : 'h-10']"
-      class="fixed bottom-0 left-24 z-10 overflow-hidden w-64 rounded-t-xl border border-b-0 border-mirage-900 transition-all ease-in-out"
-    >
-      <div class="bg-mirage text-white h-full relative">
-        <button
-          class="absolute top-0 right-0 p-2"
-          @click="options.isOpen = !options.isOpen"
-        >
-          {{ options.isOpen ? "❎" : "⬆️" }}
-        </button>
-        <div class="flex flex-col w-full divide-y divide-mirage-900 pt-10 px-5">
-          <div class="flex flex-row justify-between py-2">
-            <div>Seção principal</div>
-            <div>
-              <UToggle v-model="heroSection" />
-            </div>
-          </div>
-          <div class="flex flex-row justify-between py-2">
-            <div>Serviços</div>
-            <div>
-              <UToggle v-model="services" />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
 </template>
 

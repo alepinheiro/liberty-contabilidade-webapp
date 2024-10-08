@@ -104,4 +104,7 @@ export default defineNuxtConfig({
       Monda: "200..900",
     },
   },
+  colorMode: {
+    preference: "light",
+  },
 });
