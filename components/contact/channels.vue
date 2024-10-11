@@ -24,7 +24,14 @@
             :key="item"
             :text="$t(`pages.home.contact.channels.buttons.${item}.text`)"
           >
-            <UButton color="primary" variant="solid" size="lg" square>
+            <UButton
+              square
+              color="primary"
+              variant="solid"
+              size="lg"
+              :to="$t(`pages.home.contact.channels.buttons.${item}.link`)"
+              target="_blank"
+            >
               <Icon
                 :icon="$t(`pages.home.contact.channels.buttons.${item}.icon`)"
                 :name="item"

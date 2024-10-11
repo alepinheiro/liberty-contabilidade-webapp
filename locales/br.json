@@ -50,15 +50,18 @@
           "buttons": {
             "whatsApp": {
               "icon": "ic:baseline-whatsapp",
-              "text": "Entrar em contato pelo WhatsApp"
+              "text": "Entrar em contato pelo WhatsApp",
+              "link": "https://wa.me/5547989219131"
             },
             "email": {
               "icon": "iconoir:mail-in",
-              "text": "Entrar em contato por e-mail"
+              "text": "Entrar em contato por e-mail",
+              "link": "mailto:contabilidadeliberty@gmail.com"
             },
             "instagram": {
               "icon": "mdi:instagram",
-              "text": "Entrar em contato no Instagram"
+              "text": "Entrar em contato no Instagram",
+              "link": "https://www.instagram.com/contabilidadeliberty.br/"
             }
           }
         },
