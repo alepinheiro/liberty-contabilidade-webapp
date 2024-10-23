@@ -6,6 +6,7 @@ export default defineNuxtConfig({
       JAILSINHO_API_URL: process.env.JAILSINHO_API_URL,
     },
   },
+
   app: {
     head: {
       charset: "utf-8",
@@ -77,6 +78,7 @@ export default defineNuxtConfig({
       ],
     },
   },
+
   modules: [
     "@nuxt/ui",
     "@nuxt/eslint",
@@ -85,24 +87,38 @@ export default defineNuxtConfig({
     "@nuxtjs/sitemap",
     "@nuxtjs/google-fonts",
   ],
+
   devtools: { enabled: true },
   css: ["~/assets/css/main.scss"],
+  vite: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          api: "modern-compiler",
+        },
+      },
+    },
+  },
+
   postcss: {
     plugins: {
       tailwindcss: {},
       autoprefixer: {},
     },
   },
+
   i18n: {
-    vueI18n: "./i18n.config.ts", // if you are using custom path, default
+    vueI18n: "~/i18n.config.ts", // if you are using custom path, default
     locales: ["en", "br"],
     strategy: "no_prefix",
   },
+
   router: {
     options: {
       scrollBehaviorType: "smooth",
     },
   },
+
   googleFonts: {
     families: {
       Cinzel: "200..900",
@@ -110,7 +126,14 @@ export default defineNuxtConfig({
       Monda: "200..900",
     },
   },
+
   colorMode: {
     preference: "light",
   },
+
+  nitro: {
+    preset: "vercel",
+  },
+
+  compatibilityDate: "2024-10-23",
 });
