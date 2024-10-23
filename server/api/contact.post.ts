@@ -2,7 +2,8 @@ import { ContactSchema } from "~/components/contact/formSection.vue";
 
 export default defineEventHandler(async (event) => {
   const config = useRuntimeConfig();
-  const { data } = await readBody<{ data: ContactSchema }>(event);
+  const payload = await readBody<ContactSchema>(event);
+  console.log({ payload: config.private.JAILSINHO_API_URL });
 
   const request = await $fetch<{ success: boolean }>("/send-message/group", {
     method: "POST",
@@ -11,7 +12,7 @@ export default defineEventHandler(async (event) => {
       "Content-Type": "application/json",
       "x-api-key": config.private.JAILSINHO_API_KEY as string,
     },
-    body: data,
+    body: payload,
   });
   return {
     message: request.success

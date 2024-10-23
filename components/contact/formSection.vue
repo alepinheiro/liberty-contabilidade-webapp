@@ -18,12 +18,7 @@
               {{ $t("pages.home.contact.form.description") }}
             </p>
           </div>
-          <UForm
-            :schema="schema"
-            :state="state"
-            class="space-y-4"
-            @submit="onSubmit"
-          >
+          <UForm :schema :state class="space-y-4" @submit="onSubmit">
             <UFormGroup
               :label="$t('pages.home.contact.form.service.label')"
               :placeholder="$t('pages.home.contact.form.service.placeholder')"
@@ -162,12 +157,12 @@ const selectOptions: Array<{ label: string; value: ContactSchema["service"] }> =
     };
   });
 
-async function onSubmit(event: FormSubmitEvent<ContactSchema>) {
+async function onSubmit({ data }: FormSubmitEvent<ContactSchema>) {
   isLoading.value = true;
   try {
     const { message } = await $fetch("/api/contact", {
       method: "POST",
-      body: event,
+      body: data,
     });
     toast.add({
       title: message,
