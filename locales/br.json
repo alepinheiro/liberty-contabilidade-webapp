@@ -56,7 +56,7 @@
             "email": {
               "icon": "iconoir:mail-in",
               "text": "Entrar em contato por e-mail",
-              "link": "mailto:contabilidadeliberty@gmail.com"
+              "link": "mailto:contabilidadeliberty{'@'}gmail.com"
             },
             "instagram": {
               "icon": "mdi:instagram",
