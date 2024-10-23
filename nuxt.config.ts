@@ -132,8 +132,42 @@ export default defineNuxtConfig({
   },
 
   nitro: {
-    preset: "vercel",
+    preset: "vercel-static",
   },
 
   compatibilityDate: "2024-10-23",
+
+  sitemap: {
+    exclude: [
+      "/404",
+      "/404.html",
+      "/500",
+      "/500.html",
+      "/503",
+      "/503.html",
+      "/504",
+      "/504.html",
+      "/505",
+      "/505.html",
+      "/506",
+      "/506.html",
+      "/507",
+      "/507.html",
+      "/508",
+      "/508.html",
+      "/509",
+      "/509.html",
+      "/510",
+      "/510.html",
+      "/511",
+      "/511.html",
+      "/512",
+      "/512.html",
+      "/513",
+      "/513.html",
+      "/514",
+      "/514.html",
+      "/515",
+    ],
+  },
 });
